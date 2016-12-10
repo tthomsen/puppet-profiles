@@ -34,8 +34,4 @@ class profiles::docker::nodejs(
     revision => $git_revision,
     require => User[$user],
   }
-
-  class { '::nodejs':
-  repo_url_suffix => $node_version,
-}
 }
