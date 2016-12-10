@@ -4,6 +4,7 @@ class profiles::docker::nodejs(
   $git_revision,
   $service_run_command,
   $service_name,
+  $node_version,
 ) {
 
   group { $group:
@@ -31,4 +32,8 @@ class profiles::docker::nodejs(
     revision => $git_revision,
     require => User[$user],
   }
+
+  class { 'nodejs':
+  repo_url_suffix => $node_version,
+}
 }
