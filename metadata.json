@@ -1,0 +1,33 @@
+{
+  "name": "binaryvoid-profiles",
+  "version": "0.1.0",
+  "author": "Travis N. Thomsen",
+  "summary": "Puppet Profiles",
+  "license": "Apache-2.0",
+  "source": "http://git.binaryvoid.com/admin/projects/Puppet/puppet-profiles",
+  "project_page": "http://git.binaryvoid.com/admin/projects/Puppet/puppet-profiles",
+  "issues_url": "http://git.binaryvoid.com/Puppet/puppet-profiles/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    }
+  ]
+}
