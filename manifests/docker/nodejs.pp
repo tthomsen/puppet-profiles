@@ -33,7 +33,7 @@ class profiles::docker::nodejs(
     require => User[$user],
   }
 
-  class { 'nodejs':
+  class { '::nodejs':
   repo_url_suffix => $node_version,
 }
 }
