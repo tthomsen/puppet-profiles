@@ -24,7 +24,7 @@ class profiles::docker::nodejs(
     type   => '-',
     item   => 'nofile',
     value  => '500000',
-    require => User[$user],
+    require => User[$node_user],
   }
 
   vcsrepo { $deploy_dir:
@@ -32,6 +32,6 @@ class profiles::docker::nodejs(
     provider => git,
     source   => $git_repo,
     revision => $git_revision,
-    require => User[$user],
+    require => User[$node_user],
   }
 }
