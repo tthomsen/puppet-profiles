@@ -5,13 +5,15 @@ class profiles::docker::nodejs(
   $service_run_command,
   $service_name,
   $node_version,
+  $node_group,
+  $node_user,
 ) {
 
-  group { $group:
+  group { $node_group:
     ensure => present,
   } ->
 
-  user { $user:
+  user { $node_user:
     ensure => present,
     shell  => '/bin/false',
     gid    => $group,
